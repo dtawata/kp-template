@@ -8,7 +8,7 @@ const Header = (props) => {
   return (
     <header className={styles.header}>
       <div>
-        <div className={styles.logo}>PAM-KP</div>
+        <div className={styles.logo}>KP:PAM</div>
       </div>
       <nav>
         <ul>

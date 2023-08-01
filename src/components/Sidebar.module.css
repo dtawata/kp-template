@@ -1,11 +1,48 @@
 .container {
   width: 15%;
+  padding: 20px;
   background-color: #444;
   color: #fff;
-  padding: 20px;
   border-radius: 4px;
 }
 
 .priority {
+  margin-bottom: 25px;
+}
 
+.priority_title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.priority_num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  background-color: #FF6966;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.priority_acc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 0;
+  padding: 7px 3px;
+  border-radius: 4px;
+  color: #c0c3c6;
+  cursor: pointer;
+}
+
+.priority_acc:hover {
+  background-color: #737373;
+  color: #fff;
 }

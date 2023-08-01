@@ -26,7 +26,7 @@ const App = (props) => {
               <div className={styles.account_mid_left}>
                 <h3>Account Information</h3>
                 <div className={styles.data}>Account Manager: John Smith</div>
-                <div className={styles.data}>year_month</div>
+                <div className={styles.data}>Date: 07/23</div>
                 <div className={styles.data}>Current Account Stage: Familiarize</div>
                 <div className={styles.data}>ZIP Code: 91431</div>
                 <div className={styles.data}>Number of Employees: 872</div>
@@ -35,8 +35,8 @@ const App = (props) => {
               <div className={styles.account_mid_right}>
                 <h3>PAM Recommendation</h3>
                 <div className={styles.data}>Recommended Account Stage: Engage</div>
-                <div className={styles.data}>prediction date</div>
-                <div className={styles.data}>year_month</div>
+                <div className={styles.data}>Recommendation Date: 08/01/23</div>
+                <div className={styles.data}>Date: 07/23</div>
               </div>
             </div>
           </div>
