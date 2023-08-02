@@ -1,11 +1,27 @@
 import styles from './App.module.css';
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faUser } from '@fortawesome/free-solid-svg-icons';
 import Sidebar from './Sidebar.js';
 import Header from './Header.js';
+import axios from 'axios';
 
 const App = (props) => {
+
+  const [manager, setManager] = useState(prompt('Account Manager'));
+  const [accounts, setAccounts] = useState([]);
+
+  useEffect(() => {
+    axios.get('/api/accounts', {
+      params: {
+        manager
+      }
+    }).then((res) => {
+      console.log('res', res);
+      setAccounts(res.data);
+    })
+  }, [])
+
   return (
     <div className={styles.container}>
       <Header />
@@ -13,7 +29,7 @@ const App = (props) => {
         <Sidebar />
         <div className={styles.main}>
           <div className={styles.account}>
-            <div className={styles.banner}>Account is ready for the next stage: Engage</div>
+            <div className={styles.banner}>{manager} Account is ready for the next stage: Engage</div>
             <div className={styles.account_top}>
               <div className={styles.account_name}>Account Name <span className={styles.account_num}>0873230</span></div>
               <div className={styles.stage}>
